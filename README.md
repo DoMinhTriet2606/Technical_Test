@@ -7,4 +7,5 @@ This web application is about using jokes to cheer up everybody who visit the si
   - [x] Set up basic backend
   - [x] Create API to fetch and vote for jokes
 - **In Progress**: 
-  - [ ] Develop ReactJS user interface
+  - [x] Develop ReactJS user interface
+  - [ ] Add context API for joke services and state management
