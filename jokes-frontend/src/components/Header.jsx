@@ -3,8 +3,8 @@ import "../assets/css/components/header.css";
 
 function Header() {
     return (
-        <div className="container">
-            <header className="header__container">
+        <div className="header__container">
+            <header className="header__content">
                 <div className="image header-logo"></div>
 
                 <div className="flex header-user">

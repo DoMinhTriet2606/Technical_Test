@@ -1,16 +1,16 @@
 .slider__container {
-    position: relative;
     width: 100%;
-    height: 250px;
+    height: 220px;
+
+    margin-top: var(--header-height);
 
     display: grid;
     place-items: center;
 
-    background-color: #29b363;
-    z-index: -1;
+    background-color: var(--color-primary);
 }
 
-.text__container {
+.slider__content {
     width: fit-content;
     padding: 0 20px;
 
@@ -19,10 +19,10 @@
 
     text-align: center;
 }
-.text__container h1 {
-    font-size: 28px;
+.slider__content h1 {
+    font-size: var(--font-size-xl);
     margin-bottom: 20px;
 }
-.text__container p {
-    font-size: 12px;
+.slider__content p {
+    font-size: var(--font-size-xs);
 }
