@@ -1,5 +1,5 @@
 .main__container {
-    max-width: 1000px;
+    max-width: 980px;
     width: 100%;
     min-height: 200px;
 
@@ -11,7 +11,7 @@
     position: relative;
     text-align: justify;
 
-    margin-bottom: 68px;
+    margin-bottom: 75px;
 }
 .joke__content p {
     font-size: var(--font-size-sm);
@@ -28,7 +28,7 @@
     width: 60%;
     height: 1px;
 
-    margin-top: 34px;
+    margin-top: 40px;
 
     background-color: var(--light-text-color);
 

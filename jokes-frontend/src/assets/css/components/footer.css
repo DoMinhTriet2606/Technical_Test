@@ -1,0 +1,29 @@
+.footer__container {
+    width: 100%;
+    min-height: 136px;
+
+    padding: 28px 24px;
+
+    border-top: 1px solid var(--light-text-color);
+}
+
+.copyright__content {
+    max-width: 980px;
+    width: 100%;
+
+    margin: 0 auto;
+    font-size: var(--font-size-xs);
+    line-height: 18px;
+
+    text-align: center;
+}
+
+.copyright__content .disclaimer {
+    color: var(--light-text-color);
+
+    margin-bottom: 20px;
+}
+
+.copyright__content .copyright {
+    color: var(--text-color);
+}
