@@ -23,10 +23,10 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  cd /Web_Application/jokes-frontend
+                  cd Web_Application/jokes-frontend
                   npm install
 
             - name: Run tests
               run: |
-                  cd /Web_Application/jokes-frontend
+                  cd Web_Application/jokes-frontend
                   npm test
