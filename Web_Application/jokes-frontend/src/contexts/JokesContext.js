@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useReducer } from "react";
-import { JokeReducer } from "../assets/reducers/jokeReducer";
 import axiosInstance from "../utils/axiosConfig";
 import Cookies from "js-cookie";
+import { JokeReducer } from "../reducers/jokeReducer";
 
 export const JokesContext = createContext();
 
@@ -62,7 +62,26 @@ const JokeContextProvider = ({ children }) => {
         }
     };
 
-    const jokeContextData = { jokeState };
+    const voteJoke = async (jokeId, feedback) => {
+        try {
+            const response = await axiosInstance.put("/jokes/vote", {
+                joke_id: jokeId,
+                vote: feedback,
+            });
+            const message = response.data.message;
+
+            let jokeIds = JSON.parse(Cookies.get("jokeIds")) || [];
+            jokeIds.push(jokeId);
+            console.log(jokeIds);
+            Cookies.set("jokeIds", JSON.stringify(jokeIds));
+
+            return message;
+        } catch (error) {
+            console.error("Error voting for joke:", error);
+        }
+    };
+
+    const jokeContextData = { jokeState, fetchRandomUniqueJoke, voteJoke };
 
     return <JokesContext.Provider value={jokeContextData}>{children}</JokesContext.Provider>;
 };
