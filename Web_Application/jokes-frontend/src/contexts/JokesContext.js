@@ -24,12 +24,14 @@ const JokeContextProvider = ({ children }) => {
         };
 
         fetchJokeQuantity();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
         if (jokeState.jokeQuantity > 0) {
             fetchRandomUniqueJoke();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [jokeState.jokeQuantity]);
 
     const fetchRandomUniqueJoke = async () => {
